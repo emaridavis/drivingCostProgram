@@ -1,0 +1,20 @@
+Function Main() returns nothing
+   float milesPerGallon
+   float dollarsPerGallon
+   float cost10
+   float cost50
+   float cost400
+
+   milesPerGallon = Get next input
+   dollarsPerGallon = Get next input
+
+   cost10 = 10.0 / milesPerGallon * dollarsPerGallon
+   cost50 = 50.0 / milesPerGallon * dollarsPerGallon
+   cost400 = 400.0 / milesPerGallon * dollarsPerGallon
+
+   Put cost10 to output with 2 decimal places
+   Put " " to output
+   Put cost50 to output with 2 decimal places
+   Put " " to output
+   Put cost400 to output with 2 decimal places
+End Function
