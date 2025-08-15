@@ -1,9 +1,12 @@
+// Returns the fuel cost for a trip
 Function DrivingCost(float drivenMiles, float milesPerGallon, float dollarsPerGallon) returns float
    float cost
+   // cost = miles driven / mpg * $/gallon
    cost = drivenMiles / milesPerGallon * dollarsPerGallon
    return cost
 End Function
 
+// Reads mpg and $/gal, prints costs for 10, 50, and 400 miles
 Function Main() returns nothing
    float milesPerGallon
    float dollarsPerGallon
@@ -11,13 +14,16 @@ Function Main() returns nothing
    float trip2
    float trip3
 
+   // Inputs: mpg then dollars per gallon
    milesPerGallon = Get next input
    dollarsPerGallon = Get next input
 
-   trip1 = DrivingCost(10.0, milesPerGallon, dollarsPerGallon)
-   trip2 = DrivingCost(50.0, milesPerGallon, dollarsPerGallon)
+   // Compute costs using the helper function
+   trip1 = DrivingCost(10.0,  milesPerGallon, dollarsPerGallon)
+   trip2 = DrivingCost(50.0,  milesPerGallon, dollarsPerGallon)
    trip3 = DrivingCost(400.0, milesPerGallon, dollarsPerGallon)
 
+   // Output costs with two decimals, separated by spaces
    Put trip1 to output with 2 decimal places
    Put " " to output
    Put trip2 to output with 2 decimal places
